@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <table class="table table-light">
+        <tr class="table-dark">
+            <td>Model!!</td>
+            <td>Price!!</td>
+            <td>Color!!</td>
+        </tr>
+        
+        <!-- 반복 시작-->
+        {% for car in car_list : %}
+        <tr>
+            <td>{{ car.model }}</td>
+            <td>{{ car.price }}</td>
+            <td>{{ car.color }}</td>
+        </tr>
+        {% endfor %}
+        <!-- 반복 끝-->
+    </table>
+    <a href="/car_form">자동차 등록</a>
+    <a href="/delete_car">자동차 삭제</a>
+</div>
+{% endblock %}
+
+
+

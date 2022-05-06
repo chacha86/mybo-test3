@@ -1,0 +1,15 @@
+<h1>필터 테스트</h1>
+
+{% set li = [1,2,3,4,5] %}
+{% set li2 = ['hello','bye','good','bad', 'TEST'] %}
+
+li의 길이는 : {{ li | length }} <br>
+{% for num in li %}
+    {{num}}
+{% endfor %}
+<hr>
+{% for str in li2 %}
+    {{str | upper }}
+{% endfor %}
+<hr>
+{{li2 | random }}

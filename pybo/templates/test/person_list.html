@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <table class="table table-light">
+        <tr class="table-dark">
+            <td>name</td>
+            <td>age</td>
+            <td>address</td>
+        </tr>
+        
+        <!-- 반복 시작-->
+        {% for person in person_list : %}
+        <tr>
+            <td>{{ person.name }}</td>
+            <td>{{ person.age }}</td>
+            <td>{{ person.address }}</td>
+        </tr>
+        {% endfor %}
+        <!-- 반복 끝-->
+    </table>
+    <a href="/person_form">사람 등록</a>
+    <a href="/delete_person">사람 삭제</a>
+</div>
+{% endblock %}
+
+
+

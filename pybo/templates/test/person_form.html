@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" action="add_person">
+    <!-- 오류표시 Start -->
+    {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+        {% for field, errors in form.errors.items() %}
+        <strong>{{ form[field].label }}</strong>
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <!-- 오류표시 End -->
+    {{ form.csrf_token }}
+    <label>이름</label>
+    <input type="text" name="name" value="{{form.name.data or ''}}">
+    <label>나이</label>
+    <input type="text" name="age" value="{{form.age.data or ''}}">
+    <label>주소</label>
+    <input type="text" name="address" value="{{form.address.data or ''}}">
+    <input type="submit">
+</form>
+{% endblock %}
