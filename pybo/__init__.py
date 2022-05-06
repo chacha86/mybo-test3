@@ -16,6 +16,13 @@ migrate = Migrate()
 
 # # 사람 -> 이름, 나이, 주소
 
+
+## git 테스트중입니다!!
+## git 테스트중입니다!!
+## git 테스트중입니다!!
+## git 테스트중입니다!!
+## git 테스트중입니다!!
+## git 테스트중입니다!!
 def create_app() :
 
     app = Flask(__name__)
